@@ -1,0 +1,19 @@
+/* components/navHeader/NavHeader.wxss */
+.recommend{
+  margin-bottom: 20rpx;
+}
+.recommend>text{
+  font-size: 31rpx;
+  color:#666;
+  line-height: 80rpx;
+}
+.recommend .title{
+  font-size: 32rpx;
+ 
+}
+.recommend .title text:nth-child(2){
+  float: right;
+  padding: 1rpx 15rpx;
+  border: 2rpx solid #666;
+  border-radius: 30rpx;
+}

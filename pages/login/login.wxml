@@ -1,0 +1,28 @@
+<!--pages/login/login.wxml-->
+<!-- 登录流程
+1.收集表单项数据
+2.前端验证
+3.后端验证 -->
+<view class="container">
+  <text class="font">LOGIN</text>
+  <view class="wrapper">
+    <view class="welcome">欢迎回来！</view>
+    <view class="input-content">
+    <view class="phone">
+     <view class="phone-info">手机号码</view>
+     <input type="tel" placeholder="请输入手机号码" data-type="phone" bindinput="handleInput"/>
+    </view>
+     <view class="pwd">
+      <view class="phone-info">密码</view>
+      <input type="password" placeholder="请输入密码" data-type="password" bindinput="handleInput"/>
+     </view>
+
+    </view>
+    <button bindtap="login">登录</button>
+    <view class="forget">忘记密码？</view>
+  </view>
+  <view class="register">
+    <text>还没有账号？</text>
+    <text>马上注册</text>
+  </view>
+</view>
