@@ -30,7 +30,7 @@ Page({
       let userId = this.data.userInfo.userId
       request('/user/record',{uid:userId,type:1}).then(res=>{
         let index = 0
-        let recentPlayList = res.data.weekData.splice(0,10).map(item=>{
+        let recentPlayList = res.data.weekData.slice(0,10).map(item=>{
           item.id = index++;
           return item;
         })
