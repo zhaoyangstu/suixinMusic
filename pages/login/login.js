@@ -66,6 +66,8 @@ Page({
           })
           //本地存储用户信息
           wx.setStorageSync('userInfo', JSON.stringify(res.data.profile))
+          // 存储用户cookies
+          wx.setStorageSync('cookies', res.cookies)
           // 跳转个人中心
           setTimeout(()=>{
             wx.reLaunch({

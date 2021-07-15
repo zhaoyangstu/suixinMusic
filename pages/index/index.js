@@ -17,14 +17,14 @@ Page({
   onLoad: function (options) {
     
     request('/banner',{type:2}).then(res=>{
-    //  console.log(res)
+     console.log(res)
      this.setData({
        bannerList:res.data.banners
      })
     })
     // 请求推荐歌曲数据
     request('/personalized',{limit:15}).then(res=>{
-      console.log(res);
+      // console.log(res);
       this.setData({
         recommendList:res.data.result
       })

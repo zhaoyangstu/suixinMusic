@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/video/video",
     "pages/personal/personal",
     "pages/index/index",
     "logs/index/index",
-    "pages/video/video",
     "pages/login/login"
   ],
   "window": {
