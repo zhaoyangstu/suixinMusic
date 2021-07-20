@@ -1,4 +1,5 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "视频中心"
+  "navigationBarTitleText": "视频中心",
+  "enablePullDownRefresh":true
 }

@@ -1,0 +1,44 @@
+<!--pages/songPlay/songPlay.wxml-->
+<view class="song-container">
+  <view class="name">{{song.ar[0].name}}</view>
+  <view class="ball"></view>
+  <image class="needle {{isPlay && 'needle-play'}}" src="/static/images/song/needle.png"></image>
+  <view class="disc {{isPlay && 'disc-play'}}">
+  <image class='circle' src="/static/images/song/disc.png"></image>
+    <image class="in" src="{{song.al.picUrl}}"></image>
+  </view>
+  <!-- 更多区域 -->
+  <view class="more-container" wx:if="{{isMore}}">
+    <view class="current">
+      <text class="current-title">当前播放 ({{asongList.length}})</text>
+      <text class=" iconfont icon-close-circle  back" bindtap="handleHidden"></text>
+    </view>
+    <scroll-view scroll-y enable-flex class="more-scroll" scroll-into-view="{{'scroll'+musicId}}" scroll-with-animation>
+      <view class="more-scroll-item {{musicId == item.id? 'current-song':''}}" wx:for="{{asongList}}" wx:key='id' 
+      bindtap="handlePlaySong" data-id="{{item.id}}" id="{{'scroll'+item.id}}" >
+        <text class="iconfont icon-ziyuanldpi playing" ></text>
+        <text class="song-name">{{item.name}} - </text>
+        <text class="sing-name">{{item.artists[0].name}}</text>
+      </view>
+     
+    </scroll-view>
+  </view>
+  <!-- 进度条区域 -->
+  <view class="propogation">
+    <text class="start">{{currentTime}}</text>
+    <view class="bar-control">
+      <view class="currenttime" style="width:{{currentWidth + 'rpx'}}">
+        <view class="play-circle"></view>
+      </view>
+    </view>
+    <text class="end">{{allTime}}</text>
+  </view>
+  <!-- 底部播放区域 -->
+  <view class="play-container">
+    <text class="iconfont {{isMode? 'icon-xunhuanbofang':'icon-suijibofang'}}" bindtap="handleMode"></text>
+    <text class="iconfont icon-shangyishouge" id="pre" bindtap="handleSwitch"></text>
+    <text class="iconfont {{isPlay? 'icon-zanting':'icon-bofang'}}  big" bindtap="handlePlay"></text>
+    <text class="iconfont icon-xiayishou" id="next" bindtap="handleSwitch"></text>
+    <text class="iconfont icon-gedan" bindtap="handleMore"></text>
+  </view>
+</view>

@@ -1,0 +1,69 @@
+/* pages/recommendSong/recommendSong.wxss */
+.recommendsong-container .header{
+  position: relative;
+  width: 100%;
+  height: 300rpx;
+}
+ .header image{
+  width: 100%;
+  height: 100%;
+}
+.header .date{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 200rpx;
+  height: 200rpx;
+  text-align: center;
+  line-height: 200rpx;
+  font-size: 50rpx;
+  color: #fff;
+}
+.date .day{
+  font-size:54rpx ;
+}
+.song-container{
+  position: relative;
+  padding: 0 20rpx;
+  top: -20rpx;
+  font-size: 32rpx;
+  border-radius: 30rpx;
+  background-color: #fff;
+}
+.song-container .list-header{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.list-header .more{
+  float:right;
+}
+.song-list{
+  height: calc(100vh - 120rpx);
+}
+.song-list .scroll-item{
+  display: flex;
+  padding: 20rpx 0;
+  position: relative;
+  border-bottom: 2rpx solid rgba(0,0,0,.1);
+}
+.scroll-item image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 6rpx;
+  margin-right: 30rpx;
+}
+.song-info view{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 500rpx;
+}
+.scroll-item .iconfont{
+  position:absolute;
+  height: 80rpx;
+  width: 80rpx;
+  line-height: 80rpx;
+  text-align: right;
+  right: 0;
+}

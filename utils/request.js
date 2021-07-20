@@ -4,6 +4,7 @@ export default (url,data={},method="GET")=>{
     wx.request({
       url: 'http://localhost:3000'+url,
       // http://wymusic.free.idcfengye.com
+      // http://localhost:3000
       data,
       method,
       header:{

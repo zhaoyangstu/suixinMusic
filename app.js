@@ -1,6 +1,12 @@
 // 注册小程序
-App({
 
+App({
+  globalData:{
+    musicPlayId:'',
+    isOuterPlay:false,
+  },
+  
+  //全局对象保存退出歌曲播放页面时，再进入同一首歌页面播放按钮不一致问题
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */

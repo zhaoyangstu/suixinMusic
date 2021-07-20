@@ -13,7 +13,7 @@ Page({
     videoList:[],//视频数据
     videoId:'', //图片加载
     videoUpdateTime:[],//视频播放时间
-    
+    trigger:false//下拉刷新回弹
   },
 
   /**
@@ -29,21 +29,28 @@ Page({
         })
        //获取视频列表
       }).then(res=>{
-        request('/video/group',{id:this.data.navId}).then(res=>{
-          let index = 0
-          let videoList = res.data.datas.map(item=>{
-            item.id = index++
-            return item
-          })
-          // console.log(res);
-          this.setData({
-              videoList:res.data.datas
-            })
-          })
+        this.getVideoList(this.data.navId)
         })
       
       //拿到id才能获取视频数据
   },
+  //获取视频
+  getVideoList(navId){
+    request('/video/group',{id:navId}).then(res=>{
+      let index = 0
+      let videoList = res.data.datas.map(item=>{
+        item.id = index++
+        return item
+      })
+      // console.log(res);
+      this.setData({
+          videoList:res.data.datas,
+          trigger:false
+        })
+      })
+
+  },
+  
   navTap(event){
     let navId = event.currentTarget.id
     this.setData({
@@ -119,6 +126,18 @@ Page({
       videoUpdateTime
     })
   },
+  //下拉刷新
+  handleRefresh(){
+    this.getVideoList(this.data.navId)
+    
+  },
+  //跳转搜索页面
+  toSearch(){
+    wx.navigateTo({
+      url: '/pages/search/search',
+    })
+  },
+  
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

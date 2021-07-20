@@ -1,0 +1,120 @@
+/* pages/search/search.wxss */
+.search-container{
+  padding: 0 20rpx;
+}
+
+.header{
+  padding: 20rpx 0;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  align-items: center;
+}
+.search-input {
+  position: relative;
+  background-color:rgba(237,237,237,.4);
+  flex: 1;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+}
+.search-input .clear{
+  position: absolute;
+  z-index: 9;
+  right: 20rpx;
+  top: 0;
+  font-size: 30rpx;
+}
+.search-input .search{
+  position:absolute;
+  left: 10rpx;
+  
+}
+.search-input .search-box{
+  margin-left: 60rpx;
+  font-size: 30rpx;
+}
+.search-input .placeholder{
+  font-size: 30rpx;
+  color: #d43c33;
+}
+.back{
+  width: 100rpx;
+  font-size: 44rpx;
+  text-align: center;
+}
+.hot-search{
+  font-size: 30rpx;
+}
+.hot-search .hot-name{
+  height: 70rpx;
+  line-height: 70rpx;
+  border-bottom: 2rpx solid #eee;
+}
+.song-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.song-list .song-info{
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.song-info .number{
+  margin-right: 5rpx;
+}
+.song-info .iconImage{
+  width: 30rpx;
+  height: 25rpx;
+  margin-left: 5rpx;
+}
+
+.show-search .input-content{
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #d43c33;
+  font-size: 30rpx;
+  border-bottom:2rpx solid #d43c33;
+}
+.show-search .request-content{
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+.request-content .request-icon{
+  width: 80rpx;
+  text-align: center;
+}
+.request-content .request-message{
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* margin-left: 5rpx; */
+  border-bottom: 2rpx solid #eee;
+}
+/* 历史记录区 */
+.history{
+  position: relative;
+}
+.history-content{
+  display: flex;
+  flex-wrap: wrap;
+}
+.history-content .history-item{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  background-color:#ededed;
+  padding: 0 20rpx;
+  margin-right: 20rpx;
+  border-radius: 30rpx;
+  margin-bottom: 20rpx;
+}
+.history .delete{
+  position: absolute;
+  bottom: -50rpx;
+  right: 10rpx;
+  font-size: 38rpx;
+}

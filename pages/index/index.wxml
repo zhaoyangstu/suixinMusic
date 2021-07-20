@@ -9,7 +9,7 @@ indicator-color="ivory" indicator-active-color="#d43c33" autoplay interval="3000
 </swiper>
 <!-- 导航栏 -->
 <view class="nav-container">
-<view class="nav-item">
+<view class="nav-item"  bindtap="handleRecommend">
   <text class="iconfont icon-tuijian"></text>  
   <text>每日推荐</text>
 </view>

@@ -3,7 +3,7 @@
   <!-- 头部制作 -->
   <view class="header">
     <image src="/static/images/video/video.jpg"></image>
-    <view class="search">搜索歌曲</view>
+    <view class="search" bindtap="toSearch">搜索歌曲</view>
     <image src="/static/images/logo.png"></image>
   </view>
   <!-- 导航栏 -->
@@ -15,7 +15,9 @@
   </view>
   </scroll-view>
   <!-- 视频列表 -->
-  <scroll-view scroll-y class="video-scroll">
+  <scroll-view scroll-y class="video-scroll" refresher-enabled 
+  bindrefresherrefresh="handleRefresh"
+  refresher-triggered="{{trigger}}">
     <view class="video-item" wx:for="{{videoList}}" wx:key='id'>
        <video src="{{item.data.urlInfo.url}}"
        bindtap="handlePlay"

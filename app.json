@@ -1,10 +1,13 @@
 {
   "pages": [
-    "pages/video/video",
-    "pages/personal/personal",
     "pages/index/index",
+    "pages/search/search",
+    "pages/recommendSong/recommendSong",
+    "pages/songPlay/songPlay",
+    "pages/personal/personal",
     "logs/index/index",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/video/video"
   ],
   "window": {
     "navigationBarBackgroundColor": "#d43c33",
@@ -36,5 +39,8 @@
       }
     ]
   },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
   "sitemapLocation": "sitemap.json"
 }
